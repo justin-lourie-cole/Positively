@@ -11,16 +11,16 @@ GET 'api/v1/user/:id' will return the following object:
 [
     {
         "id": 2,
-        "firstName": "Allyson",
-        "lastName": "Wonderland",
+        "firstName": "Justin",
+        "lastName": "Cole",
         "userImage": "Image goes here",
         "totalXp": 0,
         "pw": "abc123",
         "habits": [
             {
                 "id": 2,
-                "title": "smoking",
-                "description": "I know it's bad for me but I enjoy it.",
+                "title": "coding",
+                "description": "6 hours, 5 days a week.",
                 "habitIcon": "some icon",
                 "totalGoalCount": 0,
                 "priority": 1,
@@ -28,8 +28,8 @@ GET 'api/v1/user/:id' will return the following object:
             },
             {
                 "id": 3,
-                "title": "picking my nose",
-                "description": "I also enjoy picking my nose",
+                "title": "exercising",
+                "description": "1hr, 4 days a week.",
                 "habitIcon": "some icon",
                 "totalGoalCount": 0,
                 "priority": 1,
