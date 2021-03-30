@@ -28,15 +28,10 @@ module.exports = {
 
   production: {
     client: 'pg',
-    connection: process.env.DATABASE_URL,
-    ssl: true,
-    pool: {
-      min: 2,
-      max: 10
-    },
+    connection: `${process.env.DATABASE_URL}?ssl=true`,
     migrations: {
-      tableName: 'knex_migrations',
-      directory: path.join(__dirname, 'migrations')
-    }
+        directory: './data/migrations',
+    },
+    seeds: { directory: './data/seeds' }
   }
 }
