@@ -17,7 +17,12 @@
     "server": "node server",
     "test": "jest --verbose",
     "webpack": "webpack --config ./client/webpack.config.js",
-    "lint": "eslint --ext .js,.jsx ."
+    "lint": "eslint --ext .js,.jsx .",
+    "postinstall": "db:reset",
+    "db:reset": "run-s db:delete db:migrate db:seed",
+    "db:migrate": "npm run knex migrate:latest",
+    "db:seed": "npm run knex seed:run",
+    "db:delete": "rm -f server/db/dev.sqlite3"
   },
   "keywords": [
     "frontend"
@@ -49,6 +54,7 @@
     "knex": "^0.21.18",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "pg": "^8.5.1",
     "react-router-dom": "^5.2.0",
     "redux-thunk": "^2.3.0",
     "tippy.js": "^6.3.1"
