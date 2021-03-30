@@ -4,7 +4,7 @@ exports.up = function (knex) {
     table.string('firstName')
     table.string('lastName')
     table.string('userImage')
-    table.int('totalXp')
+    table.integer('totalXp')
   })
 }
 
