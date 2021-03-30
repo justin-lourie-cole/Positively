@@ -18,7 +18,7 @@
     "test": "jest --verbose",
     "webpack": "webpack --config ./client/webpack.config.js",
     "lint": "eslint --ext .js,.jsx .",
-    "postinstall": "db:reset",
+    "postinstall": "npm run db:reset",
     "db:reset": "run-s db:delete db:migrate db:seed",
     "db:migrate": "npm run knex migrate:latest",
     "db:seed": "npm run knex seed:run",
